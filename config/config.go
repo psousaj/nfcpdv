@@ -26,7 +26,7 @@ func LoadConfig() *Config {
 		NumWorkers: func() int {
 			num, _ := os.LookupEnv("NUM_WORKERS")
 			if num == "" {
-				num = "2"
+				num = "4"
 			}
 			val, _ := strconv.Atoi(num)
 			return val

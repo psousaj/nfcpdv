@@ -9,7 +9,7 @@ Registra handlers da API.
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/psousaj/nfcpdv/internal/config"
+	"github.com/psousaj/nfcpdv/config"
 	"github.com/psousaj/nfcpdv/internal/infra/db"
 )
 
