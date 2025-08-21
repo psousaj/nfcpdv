@@ -16,7 +16,7 @@ import (
 func main() {
 	app := fiber.New()
 	config := config.LoadConfig()
-	_ = db.NewBunDB(config.DBUrl)
+	_ = db.ConnectPostgres(config.DBUrl)
 
 	app.Get("/health", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{"status": "ok"})

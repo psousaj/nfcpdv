@@ -7,7 +7,7 @@ import (
 	"github.com/uptrace/bun/dialect/pgdialect"
 )
 
-func NewBunDB(dataSourceName string) *bun.DB {
+func ConnectPostgres(dataSourceName string) *bun.DB {
 
 	sqldb, err := sql.Open("postgres", dataSourceName)
 	if err != nil {

@@ -23,7 +23,7 @@ const (
 type Job struct {
 	bun.BaseModel `bun:"table:jobs"`
 
-	ID      int64     `bun:",pk,autoincrement" json:"id"`
+	ID      int64     `bun:"id,pk,autoincrement" json:"id"`
 	JobType JobType   `bun:"notnull" json:"job_type"`
 	Status  JobStatus `bun:"notnull, default:pending" json:"status"`
 }

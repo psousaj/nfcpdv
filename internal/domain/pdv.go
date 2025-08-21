@@ -7,7 +7,7 @@ import (
 type PDV struct {
 	bun.BaseModel `bun:"table:pdvs"`
 
-	ID               int64  `bun:",pk,autoincrement" json:"id"`
+	ID               int64  `bun:"id,pk,autoincrement" json:"id"`
 	Ip               string `bun:"notnull,unique" json:"ip"`
 	Loja             string `bun:"notnull" json:"loja"`
 	Numero           string `bun:"notnull" json:"numero"`
