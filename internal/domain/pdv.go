@@ -2,8 +2,6 @@ package domain
 
 import (
 	"github.com/uptrace/bun"
-
-	"../domain/job.go"
 )
 
 type PDV struct {
@@ -19,5 +17,5 @@ type PDV struct {
 	DriverMFEPresent bool   `bun:"default:true" json:"driver_mfe_present"`
 	LastScanAt       string `bun:"nullzero" json:"last_scan_at"`
 
-	Jobs []Job `bun:"rel:has-many,join:id=cd_pdv" json:"jobs,omitempty"`
+	Jobs []Job `bun:"rel:has-many" json:"jobs,omitempty"`
 }

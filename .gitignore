@@ -53,4 +53,4 @@ _/test/
 # Go build executables
 *.exe
 
-*.env
+.env
